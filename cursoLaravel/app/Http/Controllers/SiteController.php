@@ -65,5 +65,14 @@ class SiteController extends Controller
     }
 
 
+    public function looppicture(){
+
+        $numero = 1;
+        
+        $url ='https://i.pravatar.cc/150?img='.$numero;
+
+    }
+
+
 
 }

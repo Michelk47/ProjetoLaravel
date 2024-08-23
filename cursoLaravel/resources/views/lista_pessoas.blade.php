@@ -6,24 +6,28 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Lista de pessoas</title>
 </head>
+
+<style>
+    .container{
+        max-width: 100%;
+        margin:0;
+        display: flex;
+        border: 1px solid #ccc;
+
+    }
+    .center{
+        justify-content: center
+    }
+</style>
 <body>
-    @component('components.box')
+    <div class="container center "> 
         @foreach ($listaPessoas as $item)
-            @slot('url') {{$item['image']}} @endslot
-            @slot('nome') {{$item['nome']}} @endslot
-            @slot('idade') {{$item['idade']}}@endslot       
+            @component('components.box')
+                    @slot('url') {{$item['image']}} @endslot
+                    @slot('nome') {{$item['nome']}} @endslot
+                    @slot('idade') {{$item['idade']}}@endslot       
+            @endcomponent
         @endforeach
-        
-    @endcomponent
-
-    {{-- @foreach ($listaPessoas as $item)
-
-        {{$item['image']}} <br>
-        {{$item['nome']}}<br>
-        {{$item['birth']}}<br>
-        {{$item['idade']}}<br>
-            <br>
-    @endforeach
-         --}}
+    </div>
 </body>
 </html>

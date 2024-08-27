@@ -22,11 +22,18 @@
 <body>
     <div class="container center "> 
         @foreach ($listaPessoas as $item)
-            @component('components.box')
+            {{-- @component('components.box')
                     @slot('url') {{$item['image']}} @endslot
                     @slot('nome') {{$item['nome']}} @endslot
                     @slot('idade') {{$item['idade']}}@endslot       
-            @endcomponent
+            @endcomponent --}}
+            
+            {{-- para o include funcionanr 
+            você precisa deixa os nome do slot do 
+            componente box igual o nome que retorna o 
+            array lá no controler SiteController caso 
+            contrario ele da erro  --}}
+            @include('components.box',$item)
         @endforeach
     </div>
 </body>

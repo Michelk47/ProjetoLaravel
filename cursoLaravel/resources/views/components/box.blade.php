@@ -9,7 +9,7 @@
 </style>
 
 <div class="item">
-    <img src="{{$url}}">
+    <img src="{{$image}}">
     <p>{{$nome}}</p>
     <p>{{$idade}}</p>
 </div>  

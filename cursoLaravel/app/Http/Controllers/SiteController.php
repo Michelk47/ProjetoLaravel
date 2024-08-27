@@ -70,8 +70,32 @@ class SiteController extends Controller
         $numero = 1;
         
         $url ='https://i.pravatar.cc/150?img='.$numero;
+        $dados ['url'] = $url;
+
+        //dd($dados);
+
+        return view('loop_fotos', $dados);
 
     }
+
+
+    public function index2(){
+        return view('include');
+    }
+
+
+    public function components(){
+        return view('comp');
+    }
+
+    public function layout(){
+        return view('site');
+    }
+
+    public function layout2(){
+        return view('pagina2');
+    }
+
 
 
 

@@ -16,9 +16,18 @@ Route::get('/components', [SiteController::class, 'components']);
 Route::get('layout', [SiteController::class, 'layout']);
 Route::get('layout2', [SiteController::class, 'layout2']);
 
-//========== rotas dos crud ==============//
+//========== rotas dos crud backup ==============//
 Route::get('/posts/create', [PostController::class, 'create']);
 Route::get('/posts/read', [PostController::class, 'read']);
 Route::get('/posts/all', [PostController::class, 'all']);
+Route::get('/posts/update', [PostController::class, 'update']);
+Route::get('/posts/delete', [PostController::class, 'delete']);
+
+
+// Route::get('/posts/create', [PostController::class, 'create']);
+// Route::get('/posts/read', [PostController::class, 'show']);
+// Route::get('/posts/all', [PostController::class, 'index']);
+// Route::get('/posts/update', [PostController::class, 'update']);
+// Route::get('/posts/delete', [PostController::class, 'delete']);
 
 

@@ -31,7 +31,7 @@ class PostController extends Controller
     public function read(Request $r){
         $post = new Post();
         // $posts = $post->all();
-        $post = $post->find(5);
+        $post = $post->find(2);
 
        return $post;
 
@@ -40,6 +40,7 @@ class PostController extends Controller
     public function all(Request $r){
         $posts = Post::all();
         return $posts;
+        
     }
 
     public function update(Request $r){

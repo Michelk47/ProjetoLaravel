@@ -17,19 +17,32 @@ class UserController extends Controller
     public function findOne(Request $r){
         $user = User::find($r->id);
 
-        return $user;
+        return $user->address;
 
     }
 
-    public function create(Request $r){
-        $users = [
-            'name' => 'Michel',
-            'email' => 'michel@gmail.com'
-        ];
+    public function add(Request $r){
+        $rawdata = $r->only(['name', 'email', 'password']);
 
-        $createUser = new User($users);
-        $createUser->save();
-        //dd($users);
+        $user = User::create($rawdata);
+        return $user;
+
+
+
+
+
+        // $users = [
+        //     'name' => 'Michel',
+        //     'email' => 'michel@gmail.com'
+        // ];
+
+        // $createUser = new User($users);
+        // $createUser->save();
+        // $user = new User();
+        // $user->name = 'Michel2';
+        // $user->email = 'michel2@gmail.com';
+        // $user->save();
+        // dd($user);
 
     }
 }

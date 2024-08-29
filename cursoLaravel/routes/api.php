@@ -21,11 +21,13 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/users', [UserController::class, 'index']);
 Route::get('/users/{id}', [UserController::class, 'findOne']);
+Route::post('users', [UserController::class, 'add']);
 
 
 
 Route::get('/addresses', [AdressController::class, 'index']);
 Route::get('/addresses/{id}', [AdressController::class, 'findOne']);
+Route::post('addresses', [AdressController::class, 'add']);
 
 
-Route::get('/addresses/create', [UserController::class, 'create']);
+
